@@ -271,7 +271,14 @@ fhe_floatsend(PG_FUNCTION_ARGS)
 	pq_sendfloat8(&buf, num);
 	PG_RETURN_BYTEA_P(pq_endtypsend(&buf));
 }
+Datum
+fhe_floateq(PG_FUNCTION_ARGS)
+{
+	float8		arg1 = PG_GETARG_FLOAT8(0);
+	float8		arg2 = PG_GETARG_FLOAT8(1);
 
+	PG_RETURN_BOOL(float8_cmp_internal(arg1, arg2) == 0);
+}
 
 // Datum
 // fhe_floatabs(PG_FUNCTION_ARGS)

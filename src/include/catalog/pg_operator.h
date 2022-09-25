@@ -1853,5 +1853,7 @@ DATA(insert OID = 3286 (  "-"	   PGNSP PGUID b f f 3802 23 3802 0 0 3303 - - ));
 DESCR("delete array element");
 DATA(insert OID = 3287 (  "#-"	   PGNSP PGUID b f f 3802 1009 3802 0 0 jsonb_delete_path - - ));
 DESCR("delete path");
-
+// DATA(insert OID = 6130 ( "="		   PGNSP PGUID b t t	20	20	16 6130 6131 fhe_int eq eqsel eqjoinsel ));
+// DESCR("equal");
+// DATA(insert OID = 6131 ( "<>"	   PGNSP PGUID b f f	20	20	16 6131 6130 int8ne neqsel neqjoinsel ));
 #endif							/* PG_OPERATOR_H */

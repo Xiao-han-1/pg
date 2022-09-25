@@ -712,9 +712,10 @@ DATA(insert OID = 3310 ( tsm_handler	PGNSP PGUID  4 t p P f t \054 0 0 0 tsm_han
 #define TSM_HANDLEROID	3310
 DATA(insert OID = 3831 ( anyrange		PGNSP PGUID  -1 f p P f t \054 0 0 0 anyrange_in anyrange_out - - - - - d x f 0 -1 0 0 _null_ _null_ _null_ ));
 #define ANYRANGEOID		3831
-DATA(insert OID = 8889 (	fhe_int	   PGNSP PGUID	8 FLOAT8PASSBYVAL b N f t \054 0	 0 1016 fhe_intin fhe_intout fhe_intrecv _intsend - - - d p f 0 -1 0 0 _null_ _null_ _null_ ));
+DATA(insert OID = 8889 ( fhe_int  PGNSP PGUID	8 FLOAT8PASSBYVAL b N f t \054 0	 0 1016 fhe_intin fhe_intout fhe_intrecv fhe_intsend - - - d p f 0 -1 0 0 _null_ _null_ _null_ ));
 DESCR("~18 digit integer, 8-byte storage");
 #define FHE_INTOID	8889
+
 DATA(insert OID = 8890 (  fhe_float    PGNSP PGUID	8 FLOAT8PASSBYVAL b N t t \054 0	 0 1022 fhe_floatin fhe_floatout fhe_floatrecv fhe_floatsend - - - d p f 0 -1 0 0 _null_ _null_ _null_ ));
 DESCR("double-precision floating point number, 8-byte storage");
 #define FHE_FLOATOID 8890
